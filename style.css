@@ -1,0 +1,767 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Andada+Pro:ital,wght@0,400..840;1,400..840&display=swap');
+
+body {
+    height: 510vh;
+    margin: 0;
+    font-family: 'Albert Sans', sans-serif;
+    background: url('images/bg-web2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin-top: 200px;
+}
+
+a {
+    text-decoration: none;
+    margin-top: 15px;
+}
+  
+
+#logo {
+    height: 100px;
+    margin-left: 40px;
+}
+
+#head-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3); /* translucent white */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(50px);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000; 
+}
+
+/*  */
+
+#hamburger-dropdown {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 999;
+  }
+  
+  #hamburger-dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 4px;
+  }
+  
+  #hamburger-dropdown a:hover {
+    background-color: #f0f0f0;
+  }
+
+  
+
+  /*  */
+
+
+.hover-grow {
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+  color: blue;
+  font-weight: medium;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.hover-grow:hover {
+  transform: scale(1.1);
+  color: #004c9d;
+}
+
+.hover-grow.active {
+  color: black;
+}
+
+
+
+
+#header-navigation {
+    display: flex;
+    width: 50%;
+}
+
+.header-option {
+    height: 80px;
+    width: 30%;
+    margin: 2%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#search {
+    margin-top: 18px;
+}
+
+/* BODY */
+
+#body-container, #doctor-container, #schedule {
+    display: flex;
+    margin-left: 70px;
+    margin-top: 80px;
+}
+
+#body-text {
+    font-size: 70px;
+}
+
+#doctor {
+    height: 500px;
+}
+
+
+#right-body-container {
+    margin-left: 100px;
+}
+
+#appointment-button {
+    height: 80px;
+    width: 50%;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(to right, rgb(2, 69, 224), rgb(7, 168, 249));
+    color: white;
+    font-size: 25px;
+    box-shadow: 0 2px 6px rgba(11, 11, 11, 0.5);
+}
+
+#appointment-button:hover {
+    background: linear-gradient(to right, rgb(99, 146, 255), rgb(99, 146, 255));
+    transform: scale(1.02);
+}
+
+/* DOCTOR CONTAINER */
+
+#doctor-header {
+    width: 95%;
+    height: 30px;
+    margin-top: 150px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* pushes left & right containers apart */
+    align-items: center; /* vertically centers everything */
+}
+
+#left-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#right-container {
+    display: flex;
+    align-items: center;
+}
+
+#doc-txt {
+    color: rgb(10, 214, 3);
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+#view-all {
+    color: blue;
+    font-weight: bold;
+
+}
+
+#view-all:hover {
+    transform: scale(1.02);
+    text-decoration: underline;
+    color: red;
+}
+
+
+#doctor-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 150px;
+    margin-left: 10px;
+}
+
+.doctor-list {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    background: linear-gradient(to bottom, rgba(193, 226, 250, 0.708), rgb(240, 240, 242));
+    border: 1px solid #dbeefa;
+    border-radius: 40px;
+    text-align: center;
+    padding-top: 60px; 
+    box-shadow: 0 2px 6px rgba(25, 25, 25, 0.3);
+  }
+
+  .doctor-img {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.doctor-appoint {
+    height: 50px;
+    width: 60%;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background: linear-gradient(to right, rgb(2, 69, 224), rgb(7, 168, 249));
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 2px 6px rgba(9, 9, 9, 0.5);
+}
+
+.doctor-appoint:hover{
+    transform: scale(1.02);
+    background: linear-gradient(to right, rgb(77, 129, 252), rgb(77, 129, 252));
+}
+
+
+
+/* CALENDAR */
+#schedule {
+    width: 87%;
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    background: rgba(189, 210, 249, 0.196); /* lighter for more glassy look */
+    backdrop-filter: blur(2px);          
+    -webkit-backdrop-filter: blur(2px);  /* match values for consistency */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+
+#calendar-container {
+    height: 550px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 120px;
+}
+
+.calendar-row {
+    height: 100%;
+    width: 95%;
+    display: flex;
+    gap: 5px;
+}
+
+.calendar-day {
+    background-color: rgb(141, 141, 141);
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-weight: 500;
+}
+
+.day {
+    margin-left: 40px;
+}
+
+#reference {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    gap: 50px;
+}
+
+.reference-child {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-left: 200px;
+}
+
+.dot {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+
+
+/* LOGIN PAGE */
+
+#login-container {
+    display: flex;
+    background-color: rgba(249, 251, 251, 0.767);
+    width: 60%;
+    height: 500px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+}
+
+.child-login-container-left {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    background-image: url(images/bg.jfif);
+    
+}
+
+.child-login-container-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#quicksched_logo {
+    margin-top: 20px;
+    height: 60px;
+    width: 120px;
+    margin-left: 25px;
+}
+
+#welcome-greeting {
+    margin-top: 80px;
+    font-size: 30px;
+    font-family: 'Anandra Pro', serif;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.input-box {
+    margin-top: 10px;
+    height: 35px;
+    width: 80%;
+    color: gray;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+#login-btn {
+    margin-top: 10px;
+    height: 45px;
+    width: 35%;
+    border: none;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+#login-btn:hover {
+    transform: scale(1.02);      /* Slightly enlarge */
+    background-color: rgb(146, 146, 254);  /* Optional: change color */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.593); /* Enhanced shadow */
+}
+
+/* APPOINTMENT FORM */
+
+#appointment-form-container {
+    width: 80%;
+    height: 600px;
+    background-color: #004c9d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* DOCTOR-LIST */
+
+#details-container {
+    background-color: rgba(255, 255, 255, 0.344);
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.336);
+    height: 300px;
+    width: 70%;
+    margin-left: 220px;
+    margin-bottom: 120px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    padding: 20px;
+}
+
+#details-left {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+#details-right {
+    height: 100%;
+    width: 50%;
+    padding: 2px;
+    overflow: hidden;
+    position: relative;
+    padding: 5px;
+}
+
+#details-right img {
+    width: 100%;
+    height: 110%;
+    object-fit: cover; /* Crops the image to fill the container */
+    display: block;
+    margin-left: 60px;
+}
+
+/* USER LOGIN */ 
+#user-container {
+    width: 90%;
+    height: 40%;
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+}
+
+#user-container-left, #user-container-right {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    background: linear-gradient(to top, rgb(21, 5, 251), rgb(64, 202, 249));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid white;
+}
+
+#user-container p:first-of-type {
+    font-weight: bold;
+    height: 15px;
+    color: white;
+}
+
+#user-container-left:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+    background-color: aqua;
+}   
+
+#user-container-right:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+    background: linear-gradient(to top, rgb(40, 185, 252), rgb(179, 235, 253));
+}
+
+#user-container-left:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+    background: linear-gradient(to top, rgb(40, 185, 252), rgb(179, 235, 253));
+}   
+
+/* TABLE FOR APPOINTMENT LIST */
+
+#table-list {
+    width: 95%;
+    margin-left: 28px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* PROFILE PAGE */
+
+#profile-container {
+    margin-left: 120px;
+    width: 80%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+    border-radius: 30px;
+    background: rgba(189, 210, 249, 0.196); /* lighter for more glassy look */
+    backdrop-filter: blur(14px);          
+    -webkit-backdrop-filter: blur(14px);  /* match values for consistency */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    gap: 40px;
+}
+
+#profile-container-left, #profile-container-right {
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+}
+
+#profile-container-left{
+    justify-content: center;
+}
+
+.options {
+    display: flex; 
+    justify-content: space-between; 
+    width: 80%; 
+    font-weight: bold; 
+    margin-top: 40px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.options img {
+    width: 30px;
+    height: 30px;
+}
+
+.options p {
+    margin-right: 20px;
+}
+
+#op-1:hover {
+    background-color: rgba(128, 128, 128, 0.437);
+    border-radius: 5px;
+}
+
+#op-2:hover {
+    background-color: rgba(128, 128, 128, 0.437);
+    border-radius: 5px;
+}
+
+#op-3:hover {
+    background-color: rgba(128, 128, 128, 0.437);
+    border-radius: 5px;
+}
+
+#op-4:hover {
+    background-color: rgba(128, 128, 128, 0.437);
+    border-radius: 5px;
+}
+
+/* ABOUT CONTAINER */
+
+#about-container {
+    width: 100%;
+    background: linear-gradient(to left, rgb(67, 57, 255), rgb(16, 197, 247));
+    height: 400px;
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+#about-container-left, #about-container-right {
+    width: 40%;
+    height: 100%;
+    color: white;
+}
+
+#about-container-left {
+    display: flex;
+    align-items: center;
+}
+
+#about-container-left img{
+    height: 80%;
+    width: 60%;
+    margin-left: 50px;
+}
+
+#about-container-right h1{
+    margin-top: 70px;
+}
+
+#about-container-right p{
+    font-size: 20px;
+}
+
+#about-container-right h1{
+    font-size: 50px;
+}
+
+/* COMMON SERVICES */
+
+#service-container {
+    width: 100%;
+    height: 700px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#service-container-head {
+    width: 80%;
+    height: 15%;
+}
+
+#service-container-head h1{
+    color: blue;
+    font-size: 40px;
+    margin: 0;
+}
+
+#service-container-head p{
+    color: #5f5e5e;
+    font-size: 20px;
+}
+
+.service-body {
+    height: 42%;
+    width: 80%;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-content {
+    height: 80%;
+    width: 25%;
+    background: linear-gradient(to bottom, rgb(251, 250, 253), rgb(223, 237, 250));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 92, 110, 0.508);
+}
+
+.service-content img{
+    height: 60%;
+    width: 50%;
+}
+
+#service-1:hover, #service-2:hover, #service-3:hover, #service-4:hover,
+#service-5:hover, #service-6:hover, #service-7:hover, #service-8:hover {
+    box-shadow: 0 4px 8px rgba(1, 58, 69, 0.893);
+    transform: scale(1.02);
+}
+
+/* FOOTER */
+
+#footer-container {
+    width: 99%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(254, 255, 255, 0.582);
+}
+
+.footer-child {
+    height: 100%;
+    width: 20%;
+}
+
+#socials {
+    width: 25%;
+}
+
+#socials div {
+    width: 100%;
+}
+
+#socials div img{
+    margin-left: 10px;
+}
+
+/* INFO CONTAINER */
+
+#info-parent {
+    width: 99%;
+    height: 400px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 200px;
+}
+
+#info-head {
+    height: 20%;
+    width: 70%;
+}
+
+#info-body {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.info-container {
+    height: 80%;
+    width: 80%;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, rgb(251, 250, 253), rgb(223, 237, 250));
+    box-shadow: 0 4px 8px rgba(0, 92, 110, 0.508);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.info-container img {
+    width: 50%;
+    height: 60%;
+}
+
+/* WHAT CONTAINER */
+#what-container {
+    width: 99%;
+    height: 600px;
+    border: 4px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#what-container-left {
+    width: 50%;
+    height: 100%;
+    border: 4px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#what-container-right {
+    width: 50%;
+    height: 100%;
+    border: 4px solid blue;
+}
+
+
